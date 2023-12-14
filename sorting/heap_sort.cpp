@@ -74,3 +74,23 @@ void heap_sort1(T *arr, int n) {
 }
 
 }  // namespace sorting
+
+/** Test Cases to test algorithm */
+void test() {
+    int arr1[9] = {100, -1, 30, 23, 24, 9, 34, 10, 28};
+    std::cout << "Test 1... ";
+    sorting::heap_sort(arr1, 9);
+    assert(std::is_sorted(arr1, arr1 + 9));
+    std::cout << "passed" << std::endl;
+
+    float arr2[5] = {3.4, 10.1, -2.3, 6.8, 2.8};
+    std::cout << "Test 2... ";
+    sorting::heap_sort(arr2, 5);
+    assert(std::is_sorted(arr2, arr2 + 5));
+    std::cout << "passed" << std::endl;
+}
+
+int main() {
+    test();
+    return 0;
+}

@@ -25,7 +25,7 @@ namespace sorting {
  * @param n Size of Array
  */
 template <typename T>
-void insertionSort(T *arr, int n) {
+void insertion_sort(T *arr, int n) {
     for (int i = 1; i < n; i++) {
         T temp = arr[i];
         int j = i - 1;
@@ -41,15 +41,15 @@ void insertionSort(T *arr, int n) {
 
 /** Test Cases to test algorithm */
 void tests() {
-    int arr1[10] = {100, -1, 30, 23, 24, 9, 34, 10, 28};
+    int arr1[9] = {100, -1, 30, 23, 24, 9, 34, 10, 28};
     std::cout << "Test 1... ";
-    sorting::insertionSort(arr1, 10);
-    assert(std::is_sorted(arr1, arr1 + 10));
+    sorting::insertion_sort(arr1, 9);
+    assert(std::is_sorted(arr1, arr1 + 9));
     std::cout << "passed" << std::endl;
 
     float arr2[5] = {3.4, 10.1, -2.3, 6.8, 2.8};
     std::cout << "Test 2... ";
-    sorting::insertionSort(arr2, 5);
+    sorting::insertion_sort(arr2, 5);
     assert(std::is_sorted(arr2, arr2 + 5));
     std::cout << "passed" << std::endl;
 }
