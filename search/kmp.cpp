@@ -1,7 +1,8 @@
 /**
  *
  * \file
- * \brief [
+ * \brief [KMP Algorithm 
+ *  for Pattern Searching](https://www.geeksforgeeks.org/kmp-algorithm-for-pattern-searching/)
  *
  * \details
  *
@@ -73,6 +74,14 @@ void tests() {
     }
 
     text = "aaaaaaaa";
+    pattern = "aaa";
+    pos = search::kmp(text, pattern);
+
+    for (auto p : pos) {
+        std::cout << p << std::endl;
+    }
+
+    text = "aaaaakaaa";
     pattern = "aaa";
     pos = search::kmp(text, pattern);
 
